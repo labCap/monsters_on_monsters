@@ -1,55 +1,294 @@
 //====================================================================================================
 
+.header {
+	background-color: #888181;
+	color: #fff;
+	position: relative;
+
+	&__top {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 15px 0;
+
+		@media (max-width: $mobile) {
+			align-items: start;
+		}
+	}
+
+	&__logo {
+		margin-right: 17px;
+
+		@media (max-width: 375px) {
+			text-align: end;
+		}
+
+		.logo-yellow {
+			font-style: italic;
+			font-weight: 900;
+			@include adaptiveValue("font-size", 48, 36);
+			line-height: percent(58, 48);
+			letter-spacing: -0.04em;
+
+			color: #f8e00d;
+		}
+
+		.logo-purple {
+			font-weight: 800;
+			font-size: rem(24);
+			line-height: percent(29, 24);
+			letter-spacing: -0.04em;
+			padding: 0 3px 0 5px;
+
+			color: #550a8f;
+		}
+
+		.logo-white {
+			font-style: italic;
+			font-weight: 700;
+			@include adaptiveValue("font-size", 36, 30);
+			line-height: percent(44, 36);
+			letter-spacing: -0.04em;
+
+			color: #fff;
+		}
+		.logo__descr {
+			font-weight: 700;
+			@include adaptiveValue("font-size", 24, 19);
+			line-height: percent(29, 24);
+			letter-spacing: 0.065em;
+		}
+	}
+
+	&__box {
+		display: flex;
+		align-items: center;
+		gap: 36px;
+	}
+
+	&__search {
+		// @include adaptiveValue("width", 370, 260);
+		@include adaptiveValue("height", 24, 30);
+		width: 370px;
+		transition: all 0.3s ease-in-out;
+
+		@media (max-width: $tablet) {
+			width: 260px;
+		}
+
+		@media (max-width: $mobile) {
+			position: absolute;
+			bottom: 15px;
+			right: 50px;
+			width: 0;
+			opacity: 0;
+			visibility: hidden;
+
+			&.open {
+				visibility: visible;
+				opacity: 1;
+				width: 260px;
+			}
+		}
+	}
+
+	&__social {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+		@include adaptiveValue("gap", 20, 15);
+
+		@media (max-width: $mobile) {
+			flex-direction: column;
+		}
+	}
+
+	&__social-item {
+		// width: 24px;
+		// height: 24px;
+		position: relative;
+		a {
+			@include adaptiveValue("width", 24, 50, $containerWidth, 767.98);
+			@include adaptiveValue("height", 24, 50, $containerWidth, 767.98);
+
+			@media (max-width: $mobile) {
+				width: 30px;
+				height: 30px;
+			}
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+
+	@media (max-width: $mobile) {
+		.header__social-item-search {
+			order: 1;
+		}
+	}
+
+	&__bottom {
+	}
+}
+
+#search-form-input {
+	width: 100%;
+	height: 100%;
+	background: #ffffff;
+	border: 1px solid #550a8f;
+	border-radius: 10px;
+	padding: 5px 7px 7px;
+
+	font-family: "AnonymousPro";
+	font-weight: 400;
+	font-size: rem(14);
+	line-height: percent(14, 14);
+	&::placeholder {
+		font-family: "AnonymousPro";
+		font-weight: 400;
+		font-size: rem(14);
+		line-height: percent(14, 14);
+		color: #550a8f;
+	}
+}
+.nav {
+	transition: all 0.3s ease-in-out;
+	@media (max-width: $mobile) {
+		position: absolute;
+		width: 100vw;
+		height: 100vh;
+		top: 0;
+		left: -120%;
+		overflow: auto;
+
+		background-color: #888181;
+
+		&.menu-open {
+			left: 0;
+		}
+	}
+
+	&__list {
+		padding: 8px 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 25px;
+
+		@media (max-width: $mobile) {
+			height: 100%;
+			min-height: 320px;
+			flex-direction: column;
+			align-items: start;
+			gap: 15px;
+			padding-left: 30px;
+		}
+	}
+
+	&__item {
+	}
+
+	&__link {
+		font-weight: 700;
+		@include adaptiveValue("font-size", 16, 18, $containerWidth, 767.98);
+		line-height: percent(19, 16);
+		text-transform: capitalize;
+
+		color: #ffffff;
+
+		transition: all 0.3s ease-in-out;
+
+		@media (max-width: $mobile) {
+			font-size: rem(20);
+		}
+		@media (min-width: $mobile) {
+			&:hover {
+				color: #f8e00d;
+			}
+		}
+		&:active {
+			color: #550a8f;
+		}
+	}
+}
+
+.num-marck {
+	position: absolute;
+	bottom: 4px;
+	left: 3px;
+	width: 1em;
+	height: 1em;
+	background: #f41818;
+	border-radius: 2px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	font-weight: 400;
+	font-size: rem(10);
+	line-height: percent(12, 10);
+}
 //====================================================================================================
 
 //Burger
 
 .icon-menu {
 	display: none;
-	@media (max-width: 1024px) {
+	@media (max-width: $mobile) {
 		display: block;
 		position: relative;
 		width: rem(30);
-		height: rem(18);
+		height: rem(23);
 		cursor: pointer;
 		z-index: 105;
-		span,
-		&::before,
-		&::after {
-			content: "";
+
+		div {
+			border-radius: 3px;
 			transition: all 0.3s ease 0s;
-			right: 0;
-			position: absolute;
+			position: relative;
+			margin-bottom: 3px;
 			width: 100%;
-			height: rem(2);
-			background-color: $mainColor;
+			height: rem(3);
+			background-color: #550a8f;
 		}
-		&::before {
+		div:first-child {
 			top: 0;
-			width: 30%;
 		}
-		&::after {
+		div:last-child {
 			bottom: 0;
-			width: 70%;
 		}
-		span {
-			top: calc(50% - rem(1));
+		div:first-child,
+		div:last-child {
+			width: 100%;
 		}
+
+		div:nth-child(2) {
+			width: 25px;
+			margin-left: auto;
+		}
+		div:nth-child(3) {
+			width: 25px;
+			margin-right: auto;
+		}
+
 		&.menu-open {
-			span {
+			div:nth-child(2),
+			div:nth-child(3) {
 				width: 0;
 			}
-			&::before,
-			&::after {
-				background-color: #fff;
+			div:first-child,
+			div:last-child {
+				background-color: #f8e00d;
 				width: 100%;
+				margin-bottom: 0;
 			}
-			&::before {
-				top: calc(50% - rem(1));
+			div:first-child {
+				top: 33%;
 				transform: rotate(-45deg);
 			}
-			&::after {
-				bottom: calc(50% - rem(1));
+			div:last-child {
+				bottom: 32%;
 				transform: rotate(45deg);
 			}
 		}
