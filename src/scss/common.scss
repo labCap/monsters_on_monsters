@@ -1,9 +1,12 @@
 // Заголовки, общие БЄМ блоки и проче...
 .section {
 	@include adaptiveValue("padding-top", 85, 60);
+	&__text-box {
+		margin-bottom: 50px;
+	}
+
 	&__title {
 		font-weight: 700;
-		font-size: 54px;
 		@include adaptiveValue("font-size", 54, 32);
 		line-height: 150%;
 	}
