@@ -1,0 +1,107 @@
+// ================================================================================================
+
+.intro {
+	background: url("@img/intro/bg.png") no-repeat center/cover;
+	padding: 74px 0 44px;
+	@media (max-width: $mobile) {
+		padding: 40px 0;
+	}
+	&__inner {
+		position: relative;
+		width: 100%;
+		height: 700px;
+		@include adaptiveValue("height", 700, 900, $containerWidth, 767.98);
+		@media (max-width: $mobile) {
+			height: auto;
+		}
+		// height: 1695px;
+	}
+
+	&__box {
+		position: absolute;
+		display: flex;
+		align-items: center;
+		gap: 30px;
+
+		&:first-child {
+			top: 0;
+			left: 0;
+		}
+		&:last-child {
+			flex-direction: row-reverse;
+			right: 0;
+			bottom: 0;
+		}
+
+		@media (max-width: $mobile) {
+			&:first-child,
+			&:last-child {
+				position: static;
+				flex-direction: column-reverse;
+				align-items: start;
+			}
+		}
+	}
+
+	&__text-box {
+		width: 235px;
+		@media (max-width: $mobile) {
+			width: 100%;
+		}
+	}
+
+	&__title {
+		font-weight: 700;
+		font-size: rem(36);
+		line-height: percent(44, 36);
+		margin-bottom: 30px;
+		-webkit-text-stroke: 0.5px #fff;
+	}
+
+	&__descr {
+		font-weight: 300;
+		font-size: rem(17);
+		line-height: percent(24, 17);
+		letter-spacing: -0.005em;
+		margin-bottom: 30px;
+	}
+
+	&__btn {
+	}
+
+	&__img {
+		@media (max-width: $mobile) {
+			margin: 0 auto;
+			img {
+				@include adaptiveValue("width", 500, 300, 767.98);
+				// width: 300px;
+				height: auto;
+			}
+		}
+	}
+}
+.btn {
+	background: #550a8f;
+	border: 1px solid #ffffff;
+	border-radius: 7px;
+	padding: 10px 15px;
+	color: #fff;
+	font-weight: 400;
+	font-size: rem(16);
+	line-height: percent(19, 16);
+	letter-spacing: 0.045em;
+
+	transition: all 0.3s ease-in-out;
+
+	@media (min-width: $mobile) {
+		&:hover {
+			color: #f8e00d;
+			border-color: #f8e00d;
+		}
+	}
+	&:active {
+		border-color: #550a8f;
+	}
+}
+
+// ================================================================================================
