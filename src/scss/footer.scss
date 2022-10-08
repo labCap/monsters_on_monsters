@@ -1,3 +1,133 @@
 //====================================================================================================
 
+.footer {
+	background: rgba(30, 30, 30, 0.71);
+	color: #fff;
+	padding: 95px 0 20px;
+	a {
+		transition: all 0.3s ease-in-out;
+		@media (min-width: $mobile) {
+			&:hover {
+				color: #f8e00d;
+			}
+		}
+		&:active {
+			color: #550a8f;
+		}
+	}
+
+	&__top {
+		display: flex;
+		justify-content: center;
+		gap: 47px;
+		margin-bottom: 20px;
+		@media (max-width: 1024px) {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	&__box {
+		&:last-child {
+			display: flex;
+			@include adaptiveValue("gap", 125, 25, $containerWidth, 1023.98);
+			@media (max-width: 1024px) {
+				flex-direction: column;
+			}
+		}
+	}
+
+	&__col {
+		max-width: 270px;
+		min-width: 222px;
+
+		@media (max-width: 1024px) {
+			&:last-child {
+				order: -1;
+			}
+		}
+	}
+
+	&__title {
+		font-family: "AnonymousPro";
+		font-weight: 700;
+		font-size: rem(28);
+		line-height: percent(28, 28);
+		margin-bottom: 20px;
+	}
+
+	&__text {
+		font-family: "AnonymousPro";
+		font-weight: 400;
+		font-size: rem(20);
+		line-height: 150%;
+		letter-spacing: 0.04em;
+	}
+
+	&__list-box {
+		display: flex;
+		gap: 22px;
+		white-space: nowrap;
+	}
+
+	&__bottom {
+	}
+
+	&__pay {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		@include adaptiveValue("gap", 30, 15);
+		@media (max-width: 1024px) {
+			justify-content: center;
+		}
+	}
+
+	&__logo {
+		text-align: right;
+		margin-bottom: 33px;
+		.logo-black {
+			font-style: italic;
+			color: #1e1e1e;
+			font-weight: 900;
+			font-size: rem(40);
+			line-height: percent(48, 40);
+			letter-spacing: -0.04em;
+		}
+		.logo-red {
+			margin-left: 5px;
+			font-weight: 800;
+			font-size: rem(32);
+			line-height: percent(39, 32);
+			letter-spacing: -0.04em;
+			color: #ad0b0b;
+		}
+		.logo-white {
+			font-weight: 700;
+			font-size: rem(36);
+			line-height: percent(44, 36);
+			letter-spacing: -0.04em;
+		}
+	}
+}
+
+.register-btn {
+	background: linear-gradient(
+		270deg,
+		rgba(255, 255, 255, 0.63) 0%,
+		rgba(217, 217, 217, 0) 96.07%
+	);
+	padding: 4px 0;
+	width: 100%;
+	text-align: right;
+	font-weight: 500;
+	font-size: rem(16);
+	line-height: percent(19, 16);
+	letter-spacing: 0.045em;
+	text-transform: uppercase;
+	color: #550a8f;
+}
+.pay-img {
+}
+
 //====================================================================================================
