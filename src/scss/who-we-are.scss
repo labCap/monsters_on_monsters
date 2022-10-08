@@ -1,0 +1,67 @@
+// ==========================================================================================
+
+.who-we-are {
+	background: url("@img/who-we-are/bg.png") no-repeat center;
+	padding-bottom: 55px;
+
+	&__descr {
+		font-weight: 300;
+		font-size: rem(20);
+		line-height: percent(24, 20);
+		letter-spacing: 0.075em;
+	}
+
+	&__inner {
+		display: flex;
+		gap: 30px;
+
+		@media (max-width: $mobile) {
+			gap: 18px;
+			flex-direction: column;
+		}
+	}
+
+	&__col {
+		flex: 1;
+	}
+
+	&__item {
+		min-height: 150px;
+		position: relative;
+		padding-left: 165px;
+		@media (max-width: $mobileSmall) {
+			padding-left: 0;
+		}
+
+		.who-we-are__descr {
+			font-weight: 300;
+			font-size: rem(16);
+			line-height: percent(19, 16);
+			letter-spacing: 0.075em;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 18px;
+		}
+	}
+
+	&__img {
+		position: absolute;
+		left: 0;
+		top: 0;
+		@media (max-width: $mobileSmall) {
+			position: static;
+		}
+	}
+
+	&__name {
+		font-weight: 700;
+		font-size: rem(25);
+		line-height: percent(30, 25);
+		letter-spacing: 0.04em;
+		margin-bottom: 8px;
+		color: #550a8f;
+	}
+}
+
+// ==========================================================================================
