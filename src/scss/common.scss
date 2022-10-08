@@ -3,6 +3,7 @@
 	@include adaptiveValue("padding-top", 85, 60);
 	&__text-box {
 		margin-bottom: 50px;
+		max-width: 624px;
 	}
 
 	&__title {
