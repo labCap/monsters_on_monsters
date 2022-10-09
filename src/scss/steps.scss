@@ -1,0 +1,126 @@
+.steps {
+	background: rgba(158, 74, 223, 0.6);
+	padding-bottom: 80px;
+	@media (max-width: 1023.98px) {
+		text-align: center;
+	}
+	.section__text-box {
+		max-width: 100%;
+	}
+	.section__title {
+		color: #fff;
+	}
+
+	&__inner {
+		display: flex;
+		align-items: center;
+		@media (max-width: 1400px) {
+			flex-wrap: wrap;
+		}
+	}
+
+	&__item {
+		width: 150px;
+		height: 423px;
+		@include adaptiveValue("height", 423, 310);
+
+		margin-left: 142px;
+		margin-bottom: 20px;
+		position: relative;
+		@media (max-width: 425px) {
+			margin-left: 73px;
+
+			&:nth-child(2n) {
+				.steps__img {
+					img {
+						transform: scale(-1, 1);
+					}
+				}
+			}
+		}
+
+		&:hover {
+			.steps-info-mark {
+				opacity: 1;
+			}
+			.steps__title {
+				opacity: 1;
+			}
+		}
+
+		&:nth-child(1) {
+			.steps__title {
+				color: rgba(59, 124, 8);
+			}
+		}
+		&:nth-child(2) {
+			.steps__title {
+				color: rgba(85, 10, 143);
+			}
+		}
+		&:nth-child(3) {
+			.steps__title {
+				color: rgba(59, 124, 8);
+			}
+		}
+		&:nth-child(4) {
+			.steps__title {
+				color: rgba(255, 255, 255);
+			}
+		}
+	}
+
+	&__img {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		img {
+			width: 389px;
+			@include adaptiveValue("width", 389, 290);
+			height: auto;
+		}
+		@media (max-width: 425px) {
+			img {
+				// width: 290px;
+			}
+		}
+	}
+
+	&__title {
+		position: absolute;
+		top: 10px;
+		left: 50%;
+		transform: translateX(-50%);
+		font-family: "HanaleiFill";
+		font-weight: 400;
+		font-size: rem(200);
+		@include adaptiveValue("font-size", 200, 130);
+		line-height: 100%;
+		letter-spacing: 0.075em;
+		opacity: 0.5;
+		transition: all 0.3s ease-in-out;
+	}
+}
+.steps-info-mark {
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	background: rgba(244, 24, 24);
+	border: 2px solid #ffffff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 700;
+	font-size: rem(16);
+	line-height: percent(19, 16);
+	text-align: center;
+	letter-spacing: 0.045em;
+	color: #ffffff;
+	opacity: 0.6;
+	transition: all 0.3s ease-in-out;
+}
