@@ -1,0 +1,102 @@
+// ==============================================================================
+
+.levels {
+	padding-top: 35px;
+	@include adaptiveValue("padding-bottom", 300, 140);
+	background: url("@img/levels/bg.png") no-repeat center/cover;
+	.section__text-box {
+		max-width: 916px;
+		@media (max-width: 590px) {
+			text-align: center;
+		}
+	}
+
+	.section__title {
+		margin-bottom: 26px;
+	}
+
+	&__descr {
+		font-weight: 500;
+		font-size: rem(18);
+		line-height: 150%;
+		letter-spacing: -0.015em;
+	}
+
+	&__inner {
+		@include adaptiveValue("padding-top", 176, 62);
+		padding-top: 176px;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__item {
+		&:nth-child(2n) {
+			margin-left: auto;
+		}
+		padding-left: 223px;
+		max-width: 680px;
+		min-height: 200px;
+		position: relative;
+
+		&:not(:last-child) {
+			margin-bottom: 25px;
+		}
+		@media (max-width: 590px) {
+			padding-left: 0;
+		}
+	}
+
+	&__img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 170px;
+		height: 200px;
+		img {
+			width: 100%;
+			height: 100%;
+		}
+
+		@media (max-width: 590px) {
+			position: relative;
+			margin: 0 auto;
+		}
+	}
+
+	&__num {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-weight: 800;
+		font-size: rem(64);
+		line-height: percent(77, 64);
+		letter-spacing: -0.015em;
+		color: rgba(255, 255, 255, 0.19);
+		-webkit-text-stroke: 1px #fff;
+	}
+
+	&__title {
+		font-weight: 800;
+		@include adaptiveValue("font-size", 36, 24);
+		line-height: percent(44, 36);
+		letter-spacing: -0.015em;
+		padding-top: 10px;
+	}
+
+	&__info-mark {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+
+		width: 80px;
+		height: 80px;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+// ==============================================================================
