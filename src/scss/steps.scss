@@ -40,7 +40,7 @@
 		}
 
 		&:hover {
-			.steps-info-mark {
+			.steps__info-mark {
 				opacity: 1;
 			}
 			.steps__title {
@@ -102,25 +102,12 @@
 		transition: all 0.3s ease-in-out;
 	}
 }
-.steps-info-mark {
+
+.steps__info-mark {
 	position: absolute;
 	bottom: 10px;
 	left: 50%;
 	transform: translateX(-50%);
-	width: 80px;
-	height: 80px;
-	border-radius: 50%;
-	background: rgba(244, 24, 24);
-	border: 2px solid #ffffff;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	font-weight: 700;
-	font-size: rem(16);
-	line-height: percent(19, 16);
-	text-align: center;
-	letter-spacing: 0.045em;
-	color: #ffffff;
 	opacity: 0.6;
 	transition: all 0.3s ease-in-out;
 }
