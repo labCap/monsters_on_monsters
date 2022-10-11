@@ -156,6 +156,7 @@
 	transition: all 0.3s ease-in-out;
 	@media (max-width: $mobile) {
 		position: absolute;
+		z-index: 10003;
 		width: 100vw;
 		height: 100vh;
 		top: 0;
@@ -241,7 +242,7 @@
 		width: rem(30);
 		height: rem(23);
 		cursor: pointer;
-		z-index: 105;
+		z-index: 10005;
 
 		div {
 			border-radius: 3px;
