@@ -80,28 +80,5 @@
 		}
 	}
 }
-.btn {
-	background: #550a8f;
-	border: 1px solid #ffffff;
-	border-radius: 7px;
-	padding: 10px 15px;
-	color: #fff;
-	font-weight: 400;
-	font-size: rem(16);
-	line-height: percent(19, 16);
-	letter-spacing: 0.045em;
-
-	transition: all 0.3s ease-in-out;
-
-	@media (min-width: $mobile) {
-		&:hover {
-			color: #f8e00d;
-			border-color: #f8e00d;
-		}
-	}
-	&:active {
-		border-color: #550a8f;
-	}
-}
 
 // ================================================================================================
