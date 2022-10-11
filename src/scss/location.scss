@@ -1,0 +1,164 @@
+// ===============================================================================================
+
+.location {
+	padding-top: 35px;
+	@include adaptiveValue("padding-bottom", 145, 35);
+	background-color: #c593ec;
+
+	.section__text-box {
+		@media (max-width: 425px) {
+			text-align: center;
+		}
+	}
+
+	&__descr {
+		color: #fff;
+		font-weight: 500;
+		font-size: rem(18);
+		line-height: 130%;
+		letter-spacing: -0.015em;
+	}
+
+	&__items {
+	}
+
+	&__row {
+		display: flex;
+		gap: 20px;
+
+		&:not(:last-child) {
+			margin-bottom: 40px;
+		}
+
+		@media (max-width: 970px) {
+			flex-direction: column;
+			align-items: center;
+			&:not(:last-child) {
+				margin-bottom: 20px;
+			}
+
+			.location__item {
+				&:nth-child(2n) {
+					transform: scale(-1, 1);
+					.location__map {
+						transform: scale(-1, 1);
+					}
+
+					.location__triangle {
+						transform: scale(-1, 1);
+					}
+					.location__obj {
+						transform: scale(-1, 1);
+					}
+					.location__btn {
+						transform: scale(-1, 1) translateX(-50%);
+						@media (max-width: 425px) {
+							// transform: scale(-1, 1) translateX(0%);
+						}
+					}
+				}
+			}
+			&:nth-child(2n) {
+				&:nth-child(2n) {
+					.location__triangle {
+						right: auto;
+						@include adaptiveValue("left", 20, 15);
+					}
+					.location__obj {
+						left: auto;
+						@include adaptiveValue("right", 20, 5);
+					}
+					.location__btn {
+						@media (max-width: 425px) {
+							// right: auto;
+							// @include adaptiveValue("left", 20, 5);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&__item {
+		flex: 1;
+		position: relative;
+
+		@media (max-width: 970px) {
+			max-width: 640px;
+			max-height: 420px;
+			width: 100%;
+			height: 100%;
+		}
+		@media (max-width: 425px) {
+			margin-bottom: 90px;
+		}
+	}
+
+	&__map {
+		overflow: hidden;
+		height: 420px;
+
+		// @include adaptiveValue("width", 640, 290, 767.98);
+		img {
+			object-fit: cover;
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&__triangle {
+		position: absolute;
+		@include adaptiveValue("right", 20, 5);
+		@include adaptiveValue("top", 50, 20);
+		background: url("@img/location/triangle.png") no-repeat center/cover;
+		width: 141px;
+		height: 165px;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		text-align: right;
+	}
+
+	&__triangle-text {
+		width: 130px;
+		font-weight: 500;
+		font-size: rem(14);
+		line-height: percent(17, 14);
+		text-transform: uppercase;
+		color: #ffffff;
+	}
+
+	&__obj {
+		position: absolute;
+
+		@include adaptiveValue("left", 20, 5);
+		@include adaptiveValue("bottom", 20, 5);
+
+		@include adaptiveValue("width", 130, 100);
+		@include adaptiveValue("height", 130, 100);
+
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&__btn {
+		position: absolute;
+		@include adaptiveValue("right", 20, 5);
+		@include adaptiveValue("bottom", 20, 5);
+
+		@media (max-width: 970px) {
+			right: 50%;
+			transform: translateX(50%);
+		}
+
+		@media (max-width: 425px) {
+			// @include adaptiveValue("right", 20, 5);
+			// transform: translateX(0%);
+			bottom: -55px;
+		}
+	}
+}
+
+// ===============================================================================================
