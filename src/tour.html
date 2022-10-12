@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Monsters on Monsters"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm',{})
+        <main class="page">
+
+            <form action="#" class="tour">
+                <div class="tour__container">
+                    <div class="section__text-box">
+                        <h2 class="section__title title-purple">BOOK A TOUR</h2>
+                    </div>
+                    <div class="tour__inner">
+
+                        <div class="tour__options tour-option">
+                            <h2 class="tour__title">Options</h2>
+
+                            <div class="tour-option__row">
+                                <div class="tour-option__col">
+                                    <div class="tour-option__box">
+                                        <div class="tour__box-title">Trophy</div>
+                                        <div class="tour-option__box-bottom">
+                                            <div class="tour-option__box-col">
+                                                <div class="radio-btn">
+                                                    <input type="radio" name="trophy" id="trophy1">
+                                                    <label for="trophy1">catfish</label>
+                                                </div>
+                                                <div class="radio-btn">
+                                                    <input type="radio" name="trophy" id="trophy2">
+                                                    <label for="trophy2">zander</label>
+                                                </div>
+                                                <div class="radio-btn">
+                                                    <input type="radio" name="trophy" id="trophy3">
+                                                    <label for="trophy3">pike</label>
+                                                </div>
+                                                <div class="radio-btn">
+                                                    <input type="radio" name="trophy" id="trophy4">
+                                                    <label for="trophy4">perch</label>
+                                                </div>
+                                            </div>
+                                            <div class="tour-option__box-col">
+                                                <div class="radio-btn">
+                                                    <input type="radio" name="trophy" id="trophy5">
+                                                    <label for="trophy5">bream</label>
+                                                </div>
+                                                <div class="radio-btn">
+                                                    <input type="radio" name="trophy" id="trophy6">
+                                                    <label for="trophy6">roach</label>
+                                                </div>
+                                                <div class="radio-btn">
+                                                    <input type="radio" name="trophy" id="trophy7">
+                                                    <label for="trophy7">carp</label>
+                                                </div>
+                                                <div class="radio-btn">
+                                                    <input type="radio" name="trophy" id="trophy8">
+                                                    <label for="trophy8">tench</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tour-option__box">
+                                        <div class="tour__box-title">season</div>
+                                        <div class="tour-option__box-bottom">
+                                            <div class="tour-option__box-col">
+                                                <div class="radio-btn">
+                                                    <input type="radio" name="season" id="spring">
+                                                    <label for="spring">spring</label>
+                                                </div>
+                                                <div class="radio-btn">
+                                                    <input type="radio" name="season" id="summer">
+                                                    <label for="summer">summer</label>
+                                                </div>
+                                                <div class="radio-btn">
+                                                    <input type="radio" name="season" id="autumn">
+                                                    <label for="autumn">autumn</label>
+                                                </div>
+                                                <div class="radio-btn">
+                                                    <input type="radio" name="season" id="winter">
+                                                    <label for="winter">winter</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tour-option__col">
+                                    <div class="tour-option__box">
+
+                                        <div class="tour__box-title">Possible locations</div>
+                                        <div class="tour-option__box-bottom">
+                                            <div class="tour-option__box-col">
+                                                <div class="radio-btn-img">
+                                                    <input type="radio" name="locations" id="location1">
+                                                    <label for="location1">
+                                                        <img src="@img/location/map-1.png" alt="location">
+                                                        <div class="info-mark">
+                                                            <p>356 km</p>
+                                                            <p>Distance</p>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="tour-option__box-col">
+                                                <div class="radio-btn-img">
+                                                    <input type="radio" name="locations" id="location2">
+                                                    <label for="location2">
+                                                        <img src="@img/location/map-2.png" alt="location">
+                                                        <div class="info-mark">
+                                                            <p>567 km</p>
+                                                            <p>Distance</p>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tour-option__row">
+                                <div class="tour-option__box tour-option__box-start">
+
+                                    <div class="tour__box-title">start</div>
+                                    <div class="tour-option__box-bottom">
+
+                                        <div class="tour-option__box-col">
+                                            <div class="tour-option__input-box">
+                                                <label>city</label>
+                                                <input type="text" name="city" value="Kyiv, Ukraine">
+                                            </div>
+                                            <div class="tour-option__input-data">
+                                                <div class="tour-option__input-box">
+                                                    <label>from</label>
+                                                    <input type="date" name="from">
+                                                </div>
+                                                <div class="tour-option__input-box">
+                                                    <label>on</label>
+                                                    <input type="date" name="on">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr class="line1">
+
+                        <div class="tour__terms tour-terms">
+                            <h2 class="tour__title">Additional terms</h2>
+
+                            <div class="tour-terms__row">
+                                <div class="tour-terms__col">
+
+                                    <div class="tour-terms__box">
+                                        <div class="tour__box-title">Entertainment</div>
+                                        <div class="tour-terms__box-bottom">
+                                            <div class="tour-terms__box-col">
+
+                                                <div class="checkbox-btn">
+                                                    <input type="checkbox" name="disco" id="disco">
+                                                    <label for="disco">disco</label>
+                                                </div>
+                                                <div class="checkbox-btn">
+                                                    <input type="checkbox" name="sauna" id="sauna">
+                                                    <label for="sauna">sauna</label>
+                                                </div>
+                                                <div class="checkbox-btn">
+                                                    <input type="checkbox" name="cinema" id="cinema">
+                                                    <label for="cinema">cinema</label>
+                                                </div>
+                                            </div>
+                                            <div class="tour-terms__box-col">
+                                                <div class="checkbox-btn">
+                                                    <input type="checkbox" name="hookah" id="hookah">
+                                                    <label for="hookah">hookah</label>
+                                                </div>
+                                                <div class="checkbox-btn">
+                                                    <input type="checkbox" name="fire show" id="fire show">
+                                                    <label for="fire show">fire show</label>
+                                                </div>
+                                                <div class="checkbox-btn">
+                                                    <input type="checkbox" name="boat" id="boat">
+                                                    <label for="boat">boat</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tour-terms__box">
+                                        <div class="tour__box-title">Line-up</div>
+                                        <div class="tour-terms__box-bottom">
+                                            <div class="tour-terms__box-col">
+
+                                                <div class="input-services-box">
+                                                    <input type="number" name="adults" id="adults" value="3">
+                                                    <label for="adults">adults</label>
+                                                </div>
+                                                <div class="input-services-box">
+                                                    <input type="number" name="children" id="children" value="4">
+                                                    <label for="children">children</label>
+                                                </div>
+                                                <div class="input-services-box">
+                                                    <input type="number" name="pets" id="pets" value="2">
+                                                    <label for="pets">pets</label>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tour-terms__col">
+
+
+                                    <div class="tour-terms__box">
+                                        <div class="tour__box-title">Inventory/Food</div>
+                                        <div class="tour-terms__box-bottom">
+                                            <div class="tour-terms__box-col">
+                                                <div class="input-services-box">
+                                                    <input type="number" name="tent" id="tent" value="3">
+                                                    <label for="tent">tent</label>
+                                                </div>
+                                                <div class="input-services-box">
+                                                    <input type="number" name="breakfast" id="breakfast" value="7">
+                                                    <label for="breakfast">breakfast</label>
+                                                </div>
+                                                <div class="input-services-box">
+                                                    <input type="number" name="sleeping" id="sleeping" value="7">
+                                                    <label for="sleeping">sleeping bags</label>
+                                                </div>
+                                                <div class="input-services-box">
+                                                    <input type="number" name="dinner" id="dinner" value="2">
+                                                    <label for="dinner">dinner</label>
+                                                </div>
+                                                <div class="input-services-box">
+                                                    <input type="number" name="karimats" id="karimats" value="6">
+                                                    <label for="karimats">karimats</label>
+                                                </div>
+                                            </div>
+                                            <div class="tour-terms__box-col">
+                                                <div class="checkbox-btn">
+                                                    <input type="checkbox" name="evening-party" id="evening-party">
+                                                    <label for="evening-party">evening party</label>
+                                                </div>
+                                                <div class="checkbox-btn">
+                                                    <input type="checkbox" name="table" id="table">
+                                                    <label for="table">table</label>
+                                                </div>
+                                                <div class="checkbox-btn">
+                                                    <input type="checkbox" name="tackle" id="tackle">
+                                                    <label for="tackle">tackle</label>
+                                                </div>
+                                                <div class="checkbox-btn">
+                                                    <input type="checkbox" name="armchairs" id="armchairs">
+                                                    <label for="armchairs">armchairs</label>
+                                                </div>
+                                                <div class="checkbox-btn">
+                                                    <input type="checkbox" name="bait/bait" id="bait/bait">
+                                                    <label for="bait/bait">bait / bait</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tour-terms__box tour-terms__box-cost">
+                                        <div class="tour__box-title">Tour cost</div>
+                                        <div class="tour-terms__box-bottom">
+                                            <div class="tour-terms__prise">2540 $</div>
+                                            <div class="tour-terms__discount">discount
+                                                <span class="tour-terms__discount-persent">5%</span>
+                                            </div>
+                                            <div class="tour-terms__prise2">2413 $</div>
+                                            <div class="tour-terms__pay-now">pay now</div>
+                                            <div class="tour-terms__card">
+                                                <input type="number" class="card__number"
+                                                    placeholder="0000 0000 0000 0000">
+                                                <input type="number" class="card__date" placeholder="00/00">
+                                                <input type="number" class="card__cvv" placeholder="000">
+                                                <img class="card__img" src="@img/footer/visa.svg" alt="visa">
+                                            </div>
+                                            <button type="submit" class="tour-terms__btn btn">pay now</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <hr class="line2">
+
+                    </div>
+                </div>
+            </form>
+        </main>
+        @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+</body>
+
+</html>
