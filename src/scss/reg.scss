@@ -1,0 +1,102 @@
+// ===========================================================================
+
+.reg {
+	background-color: #cafc86;
+	padding-bottom: 90px;
+	&__inner {
+		position: relative;
+	}
+
+	&__form {
+		position: relative;
+		z-index: 5;
+		margin: 0 auto;
+		max-width: 415px;
+		input {
+			display: block;
+			max-width: 415px;
+			width: 100%;
+			background: #ffffff;
+			border-radius: 20px;
+			padding: 17px 23px;
+			margin-bottom: 30px;
+			font-weight: 400;
+			font-size: rem(16);
+			line-height: percent(19, 16);
+			color: #434343;
+
+			&::placeholder {
+				font-weight: 400;
+				font-size: rem(16);
+				line-height: percent(19, 16);
+				color: #434343;
+			}
+		}
+	}
+
+	&__dtb {
+		display: grid;
+		grid-template: "t t t" "i3 i2 i1";
+		@include adaptiveValue("grid-column-gap", 50, 10);
+
+		.reg__info {
+			grid-area: t;
+		}
+		input {
+			text-align: center;
+			// max-width: 100px;
+			width: 100%;
+
+			&:nth-child(1) {
+				grid-area: i1;
+			}
+			&:nth-child(2) {
+				grid-area: i2;
+			}
+			&:nth-child(3) {
+				grid-area: i3;
+			}
+		}
+	}
+
+	&__info {
+		font-weight: 400;
+		font-size: rem(16);
+		line-height: percent(19, 16);
+		margin-bottom: 13px;
+	}
+
+	&__btn {
+		width: 220px;
+		margin-bottom: 21px;
+	}
+
+	&__num {
+		position: absolute;
+		z-index: 1;
+		bottom: 90px;
+		left: 0;
+		font-family: "HanaleiFill";
+		font-weight: 400;
+		font-size: rem(300);
+		line-height: percent(213, 300);
+		letter-spacing: 0.03em;
+
+		color: rgba(59, 124, 8, 0.2);
+	}
+	.info-mark {
+		position: absolute;
+		z-index: 1;
+		bottom: 0;
+		right: 0;
+		width: 450px;
+		height: 450px;
+		font-weight: 700;
+		font-size: rem(96);
+		line-height: percent(116, 96);
+		letter-spacing: 0.045em;
+		opacity: 0.2;
+	}
+}
+
+// ===========================================================================
