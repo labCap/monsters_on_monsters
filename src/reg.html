@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Monsters on Monsters"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm',{})
+        <main class="page">
+            <section class="section reg">
+                <div class="reg__container">
+                    <div class="reg__inner">
+                        <div class="section__text-box">
+                            <h2 class="section__title title-purple">registration</h2>
+                        </div>
+
+                        <form action="#" class="reg__form">
+                            <input type="text" placeholder="Name">
+                            <input type="text" placeholder="Surname">
+                            <input type="tel" placeholder="Phone number">
+
+                            <div class="reg__dtb">
+                                <div class="reg__info">Date of Birth</div>
+                                <input type="number" placeholder="Day" value="12">
+                                <input type="number" placeholder="Month" value="02">
+                                <input type="number" placeholder="Year" value="1990">
+                            </div>
+
+                            <input type="password" placeholder="Password">
+
+                            <button class="reg__btn btn" type="submit">create account</button>
+                            <div class="reg__info">Do you already have an account?</div>
+                        </form>
+
+                        <div class="reg__num">1</div>
+                        <div class="info-mark">register</div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+</body>
+
+</html>
