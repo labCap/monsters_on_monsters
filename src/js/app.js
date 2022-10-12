@@ -99,7 +99,7 @@ import "../scss/style.scss";
 // import './libs/watcher.js'
 
 // Функции работы скроллом
-import * as flsScroll from "./files/scroll/scroll.js";
+// import * as flsScroll from "./files/scroll/scroll.js";
 
 // Плавная навигация по странице
 // Документация: https://template.fls.guru/template-docs/modul-plavnoj-navigacii-po-stranice.html
@@ -107,7 +107,7 @@ import * as flsScroll from "./files/scroll/scroll.js";
 
 // Функционал добавления классов к хедеру при прокрутке
 // Документация: https://template.fls.guru/template-docs/modul-dobavleniya-klassov-k-shapke-pri-prokrutke-stranicy.html
-flsScroll.headerScroll();
+// flsScroll.headerScroll();
 
 // Функционал липкого блока
 // flsScroll.stickyBlock();
@@ -128,7 +128,7 @@ flsScroll.headerScroll();
 
 /* Динамический адаптив */
 // Документация: https://template.fls.guru/template-docs/dinamicheskij-adaptiv.html
-import "./libs/dynamic_adapt.js";
+// import "./libs/dynamic_adapt.js";
 
 /* Форматирование чисел */
 // import './libs/wNumb.min.js';
